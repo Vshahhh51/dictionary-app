@@ -1,67 +1,81 @@
 <link rel="stylesheet" href="./style.css">
 <script src="./script.js"></script>
 
+* { box-sizing: border-box; }
+
+html { font-size: 10px; } 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fdf6ec;
-  color: #333;
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  letter-spacing: 0.05rem;
+  word-spacing: 0.1rem;
+  font-family: "Georgia", "Times New Roman", serif;         
+}
+
+
+h1, h2, h3 { font-family: "Trebuchet MS", "Gill Sans", sans-serif; } 
+h1 { font-size: 3rem; letter-spacing: 0.1rem; margin: 0; }
+h2 { font-size: 2.25rem; letter-spacing: 0.08rem; }
+h3 { font-size: 1.75rem; letter-spacing: 0.05rem; }
+
+
+header { text-align: center; }
+
+
+section > p:first-of-type { text-indent: 1.25rem; }
+
+
+header, section, aside, nav, footer { padding: 20px; }
+section { float: left; width: 50%; }
+aside   { float: left; width: 30%; }
+nav     { float: left; width: 20%; }
+footer  { clear: both; }
+
+header, footer {
+  border-top: 5px solid #a66;   /* reddish */
+  border-bottom: 5px solid #a66;
+}
+
+
+nav ul { list-style: none; margin: 0; padding: 0; }
+nav li { margin: 0 0 20px 0; }
+nav a {
+  display: block;
   text-align: center;
-  margin: 0;
-  padding: 0;
+  text-decoration: none;
+  padding: 20px;
+  border: 2px solid #a66;
+  color: #000;
+}
+nav a:hover,
+nav a:focus { background: #a87; color: #fff; outline: none; }
+
+
+a:link,
+a:visited {
+  color: #7a1f1f;           
+  text-decoration: underline;
+}
+a:focus,
+a:hover {
+  color: #000;
+  text-decoration: none;
+  outline: none;            
+}
+a:active {
+  color: #fff;
+  background: #7a1f1f;     
 }
 
-header {
-  background-color: #ffcc80;
-  padding: 1.5rem 0;
-  color: #333;
+a[href^="http"]::after {
+  content: "";
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  margin-left: 0.25rem;
+  background: url("external-link-52.png") no-repeat center / contain;
+  vertical-align: text-bottom;
 }
-
-main {
-  margin: 2rem auto;
-  max-width: 600px;
-  background-color: #fff8f0;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-  padding: 0.6rem;
-  width: 70%;
-  border-radius: 8px;
-  border: 1px solid #aaa;
-  font-size: 1rem;
-}
-
-button {
-  padding: 0.6rem 1.2rem;
-  margin-left: 0.5rem;
-  border: none;
-  background-color: #ffa726;
-  color: white;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #fb8c00;
-}
-
-#result {
-  margin-top: 2rem;
-  text-align: left;
-}
-
-footer {
-  background-color: #ffe0b2;
-  padding: 1rem;
-  color: #333;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-.error {
-  color: red;
-  font-weight: bold;
-}
-
